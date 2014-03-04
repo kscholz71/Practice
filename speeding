@@ -1,0 +1,27 @@
+public class speeding {
+
+public int caughtSpeeding(int speed, boolean isBirthday){
+	if(speed<=60){ return 0;}
+
+	if(!isBirthday){
+		if(speed<=80){ return 1;}
+		else{return 2;}
+
+		}
+	if(isBirthday){
+		if(speed<=85){ return 1;}
+		else{return 2;}
+		}
+	}
+
+public static void main(String[] args) {
+	public int a;
+	public int b;
+
+	a.caughtSpeeding(60,false);
+	b.caughtSpeeding(90, true);
+	System.out.println(a);
+	System.out.println(b);
+
+	}
+}
