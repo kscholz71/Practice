@@ -1,0 +1,49 @@
+//Simple implementation of Stack with an array of type String. 
+public class Stack{
+	
+	public String[] stack;
+	private int stackSize; 
+	private int top= -1;
+
+	Stack(int size){
+		stackSize=size; 
+		stack= new String[size];
+	}
+
+	public void push( String input){
+		if(top + 1 < stackSize){
+			top++;
+			stack[top]= input;
+		}else{ System.out.println("No more room on stack");}
+
+		displayStack(); 
+		System.out.println("Push" + input+ "was added to stack");
+	}
+
+	public void pop(){
+		if(top >= 0){
+			//System.out.println(stack[top]);
+			displayStack(stack[top]);
+			displayStack();
+			top--;
+			return stack[top--];
+
+		}else{ displayStack();
+				System.out.println("Stack is Empty");}
+	}
+
+	public void seeTop(){
+		System.out.println("Item at top of stack is" + stack(top));
+
+	}
+
+	public void displayStack(){
+		for (int i: stack) {
+			System.out.println(stack[i]);
+		}
+	}
+
+	public static void main(String[] args) {
+		Stack stack1= new Stack(10);
+	}
+}
